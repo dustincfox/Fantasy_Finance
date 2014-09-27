@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140927193419) do
+ActiveRecord::Schema.define(version: 20140927222329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: true do |t|
     t.string   "name"
-    t.integer  "sector_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -26,10 +25,12 @@ ActiveRecord::Schema.define(version: 20140927193419) do
   create_table "investments", force: true do |t|
     t.integer  "portfolio_id"
     t.integer  "user_id"
-    t.string   "name"
     t.integer  "category_id"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sector_id"
+    t.string   "symbol"
   end
 
   create_table "portfolios", force: true do |t|
