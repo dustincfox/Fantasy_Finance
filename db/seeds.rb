@@ -32,6 +32,13 @@ CSV.foreach(stock_data, :headers => true) do |row|
   end
   Investment.create(user_id: user.id, portfolio_id: portfolio.id, category_id: cat_1.id, symbol: row["Symbol"], name: row["Name"], sector_id: sector.id)
 end
+
+investments = Investment.all
+
+investments.each do |investment|
+  investment.update(price: rand(100), shares: (1 + rand(20)))
+  investment.save
+end
   
   
  

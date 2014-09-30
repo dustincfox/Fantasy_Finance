@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  helper :application
+
   # GET /users
   # GET /users.json
   def index
+    @picks = Investment.all.sample(15)
+    @investments = @picks[0..9]
+    @bench = @picks[10..14]
   end
 
   # GET /users/1

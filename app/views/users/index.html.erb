@@ -1,1 +1,77 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container nav-collapse">
+      <h1>Active Roster</h1>
+      <p>Week 5</p>
+    </div>
+  </div>
+</div>
 
+<div class="investments-container">
+  <div class="inner-investments-container">
+  <div class="row">
+    <div class="table-container">
+  <div class="row text-center team-name">
+    <h3>Team CanStockWillStock</h3>
+  </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><span class="table-text"></span></th>
+            <th><span class="table-text">Name</span></th>
+            <th><span class="table-text">Price</span></th>
+            <th><span class="table-text">Shares</span></th>
+            <th><span class="table-text">Amount</span></th>
+            <th><span class="table-text"></span></th>
+          </tr>
+        </thead>
+
+        <tbody>
+      <% @investments.each_with_index do |investment, index| %>
+        <tr>
+          <td><span class="table-text"> <%= index + 1 %> </span></td>
+          <td><div class="table-thing"><span class="table-text"><%= investment.name %></span></td>
+          <td><span class="table-text"><%= investment.price %></div></span></td>
+          <td><span class="table-text"><%= investment.shares %></span></td>
+          <td><span class="table-text">$<%= amount(investment) %></span></td>
+          <td><span class="table-text">
+            <input type="range" value="" data-slider-min="0" data-slider-max="100" data-slider-step="5" data-slider-value="50" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="hide">
+          </span></td>
+        </tr>
+      <% end %>  
+        </tbody>
+      </table>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th><span class="table-text"></span></th>
+            <th><span class="table-text">Name</span></th>
+            <th><span class="table-text">Price</span></th>
+            <th><span class="table-text">Shares</span></th>
+            <th><span class="table-text">Amount</span></th>
+            <th><span class="table-text"></span></th>
+          </tr>
+        </thead>
+        <div class="row bench-row team-name">
+          <h3>Inactives</h3>
+        </div>
+        <tbody>
+      <% @bench.each_with_index do |bench, index| %>
+        <tr>
+          <td><span class="table-text"><%= index + 1 %></span></td>
+          <td><span class="table-text"><%= bench.name %></span></td>
+          <td><span class="table-text"><%= bench.price %></span></td>
+          <td><span class="table-text"><%= bench.shares %></span></td>
+          <td><span class="table-text">$<%= amount(bench) %></span></td>
+          <td><span class="table-text">
+            <input type="range" value="" data-slider-min="0" data-slider-max="100" data-slider-step="5" data-slider-value="50" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="hide"></span>
+          </td>
+        </tr>
+      <% end %>  
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

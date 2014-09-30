@@ -1,3 +1,97 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar {
+  text-align: center;
+  opacity: 0.6;
+}
+
+.nav-collapse h1 {
+  color: black;
+}
+
+.nav-collapse p {
+  color: black;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  margin: 0px;
+}
+
+.span12 {
+  margin: 0px;
+}
+
+.dark-matter {
+  opacity: 0.8;
+  background-color: grey;
+}
+
+body {
+  background-image: image-url('27144324_ml.jpg');
+   background-repeat: repeat-y;
+}
+
+.inner-investments-container {
+  text-align: center;
+  position: relative;
+  top: 89px;
+  left: 0px;
+}
+
+.table-container {
+  margin: 0px 10%;
+  border: 2px solid grey;
+  padding: 10px;
+
+}
+
+table {
+  margin: 0px auto;
+}
+
+th {
+  text-align: center;
+  min-width: 30px;
+  max-width: 100px;
+  color: white;
+  /*padding: 10px 30px;*/
+}
+
+td {
+  text-align: center;
+  min-width: 30px;
+  max-width: 100px;
+  color: white;
+  /*padding: 10px 30px;*/
+}
+
+.company-name {
+  width: 100px;
+}
+
+#ex1Slider .slider-selection {
+  background: #BABABA;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: white;
+  font-weight: bold;
+}
+
+.table-text {
+  font-size: 16px;
+  font-weight: bolder;
+  color: white;
+}
+
+.team-name {
+  background-color: grey;
+  opacity: 0.6;
+  margin: 0px auto;
+}
+
+.table-thing {
+  
+}
